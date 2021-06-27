@@ -1,30 +1,24 @@
 // import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Library from './pages/Library';
-import Playlist from './pages/Playlist';
-import Search from './pages/Search'
+import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
+
+//Icons
+import AdjustIcon from '@material-ui/icons/Adjust';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 function App() {
   return (
-    <Router>
-      <Switch>
+   <div>
+     <AppBar position = "static">
+       <Toolbar>
+         <AdjustIcon/>
 
-        {/** Home Page */}
-        <Route exact path ="/">
-          <Library/>
-        </Route>
+         <Typography variant = "h5">
+           Hello
+         </Typography>
 
-        {/** Search Page */}
-        <Route path = "/search">
-          <Search/>
-        </Route>
-
-        {/** Playlist Page */}
-        <Route path = "/playlist">
-          <Playlist/>
-        </Route>
-      </Switch>
-    </Router>
+       </Toolbar>
+     </AppBar>
+   </div>
   );
 }
 
