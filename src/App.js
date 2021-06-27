@@ -1,23 +1,12 @@
 // import './App.css';
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
-
-//Icons
-import AdjustIcon from '@material-ui/icons/Adjust';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import Header from "./components/Header";
+import GroupButton from "./components/GroupButton";
 
 function App() {
   return (
    <div>
-     <AppBar position = "static">
-       <Toolbar>
-         <AdjustIcon/>
-
-         <Typography variant = "h5">
-           Hello
-         </Typography>
-
-       </Toolbar>
-     </AppBar>
+     <Header/>
+     <GroupButton/>
    </div>
   );
 }
