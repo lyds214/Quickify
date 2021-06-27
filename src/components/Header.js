@@ -3,7 +3,7 @@ import { AppBar, IconButton, Toolbar, Typography, makeStyles } from '@material-u
 
 //Icons 
 import AdjustIcon from '@material-ui/icons/Adjust';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
@@ -32,7 +32,7 @@ const Header = () => {
                             <SearchIcon/>
                         </IconButton>
                         <IconButton color = "inherit">
-                            <ShoppingCartIcon/>
+                            <MusicNoteIcon/>
                         </IconButton>
                         <IconButton color = "inherit">
                             <AccountCircle/>

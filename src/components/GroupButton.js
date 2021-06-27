@@ -1,16 +1,70 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
+import { Button, Grid, makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        marginTop: theme.spacing(1),
+        borderRadius: "5em",
+    },
+   
+}))
 
 const GroupButton = () => {
+    const classes = useStyles()
+    
     return (
-        <div>
-            <Button variant = "contained" color = "primary" disableElevation>My Playlists</Button>
-            <Button variant = "contained" color = "primary" disableElevation>Artists</Button>
-            <Button variant = "contained" color = "primary" disableElevation>Genre</Button>
-            <Button variant = "contained" color = "primary" disableElevation>Top 50</Button>
+        <div className = {classes.button}>
+            <Grid 
+                container
+                direction = "row"
+                justify = "center"
+                alignItems = "center"
+                spacing = {2}
+            >
+                <Grid item>
+                    <Button 
+                        variant = "outlined" 
+                        color = "primary" 
+                        disableElevation
+                        className = {classes.button}
+                    >
+                        My Playlists
+                    </Button>
+                </Grid>
 
+                <Grid item>
+                    <Button 
+                        variant = "outlined" 
+                        color = "primary" 
+                        disableElevation
+                        className = {classes.button}
+                    >
+                        Artists
+                    </Button>
+                </Grid>
 
+                <Grid item>
+                    <Button 
+                        variant = "outlined" 
+                        color = "primary" 
+                        disableElevation
+                        className = {classes.button}
+                    >
+                        Genre
+                    </Button>
+                </Grid>
 
+                <Grid item>
+                    <Button 
+                        variant = "outlined" 
+                        color = "primary" 
+                        disableElevation
+                        className = {classes.button}
+                    >
+                        Top 50
+                    </Button>
+                </Grid>
+            </Grid>
         </div>
     )
 }
