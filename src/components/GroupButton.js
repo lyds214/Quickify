@@ -1,10 +1,16 @@
 import React from 'react'
 import { Button, Grid, makeStyles } from '@material-ui/core'
 
+
+{/**To-Do's:
+    1. Make all buttons' size the same
+*/}
+
 const useStyles = makeStyles((theme) => ({
     button: {
         marginTop: theme.spacing(1),
         borderRadius: "5em",
+        minHeight: '50px',
     },
    
 }))
@@ -13,7 +19,7 @@ const GroupButton = () => {
     const classes = useStyles()
     
     return (
-        <div className = {classes.button}>
+        <div>
             <Grid 
                 container
                 direction = "row"
@@ -23,19 +29,19 @@ const GroupButton = () => {
             >
                 <Grid item>
                     <Button 
-                        variant = "outlined" 
-                        color = "primary" 
+                        variant = "contained" 
+                        color = "secondary" 
                         disableElevation
                         className = {classes.button}
                     >
-                        My Playlists
+                        Playlists
                     </Button>
                 </Grid>
 
                 <Grid item>
                     <Button 
-                        variant = "outlined" 
-                        color = "primary" 
+                        variant = "contained" 
+                        color = "secondary" 
                         disableElevation
                         className = {classes.button}
                     >
@@ -45,8 +51,8 @@ const GroupButton = () => {
 
                 <Grid item>
                     <Button 
-                        variant = "outlined" 
-                        color = "primary" 
+                        variant = "contained" 
+                        color = "secondary" 
                         disableElevation
                         className = {classes.button}
                     >
@@ -56,8 +62,8 @@ const GroupButton = () => {
 
                 <Grid item>
                     <Button 
-                        variant = "outlined" 
-                        color = "primary" 
+                        variant = "contained" 
+                        color = "secondary" 
                         disableElevation
                         className = {classes.button}
                     >
