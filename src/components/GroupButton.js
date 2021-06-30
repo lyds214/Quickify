@@ -34,7 +34,7 @@ const GroupButton = () => {
                         color = "secondary" 
                         disableElevation
                         className = {classes.button}
-                        
+                        component = {Link} to = "/"
                     >
                         Playlists
                     </Button>
@@ -46,6 +46,7 @@ const GroupButton = () => {
                         color = "secondary" 
                         disableElevation
                         className = {classes.button}
+                        component = {Link} to = "/artist"
                     >
                         Artists
                     </Button>
@@ -57,6 +58,7 @@ const GroupButton = () => {
                         color = "secondary" 
                         disableElevation
                         className = {classes.button}
+                        component = {Link} to = "/genre"
                     >
                         Genre
                     </Button>
@@ -68,6 +70,7 @@ const GroupButton = () => {
                         color = "secondary" 
                         disableElevation
                         className = {classes.button}
+                        component = {Link} to = "/top50"
                     >
                         Top 50
                     </Button>
