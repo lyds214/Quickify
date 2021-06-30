@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
-
 import Artist from '../components/Artist'
+
+import { Box, Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     space: {
