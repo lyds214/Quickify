@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Grid, makeStyles } from '@material-ui/core'
 
 
@@ -33,6 +34,7 @@ const GroupButton = () => {
                         color = "secondary" 
                         disableElevation
                         className = {classes.button}
+                        
                     >
                         Playlists
                     </Button>
