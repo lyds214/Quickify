@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Grid, makeStyles } from '@material-ui/core'
 
-
 {/**To-Do's:
     1. Make all buttons' size the same
 */}

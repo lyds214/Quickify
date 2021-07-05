@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(15)
     }
 }))
+
 const Artist = () => {
     const classes = useStyles()
 

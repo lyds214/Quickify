@@ -1,7 +1,7 @@
 import React from 'react'
 import Playlist from '../components/Playlist'
 
-import { Box, Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
+import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     space: {
