@@ -1,5 +1,5 @@
 import React from 'react'
-import Playlist from '../components/Playlist'
+import PlaylistCard from '../components/PlaylistCard'
 
 import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 
@@ -32,55 +32,10 @@ const Top50Page = () => {
                     >
                         <Grid item>
                             <CardContent>
-                                <Playlist/>
+                                <PlaylistCard/>
                             </CardContent>
                         </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-
+ 
                     </Grid>
                    
                 </Card>

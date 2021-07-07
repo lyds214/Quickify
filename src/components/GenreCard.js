@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const Genre = () => {
+const GenreCard = () => {
     const classes = useStyles()
 
     return (
@@ -24,4 +24,4 @@ const Genre = () => {
     )
 }
 
-export default Genre
+export default GenreCard

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const Artist = () => {
+const ArtistAvatar = () => {
     const classes = useStyles()
 
     return (
@@ -33,4 +33,4 @@ const Artist = () => {
     )
 }
 
-export default Artist
+export default ArtistAvatar

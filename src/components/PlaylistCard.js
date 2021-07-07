@@ -19,19 +19,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const Playlist = () => {
+const PlaylistCard = () => {
     const classes = useStyles()
-
-    const [playlist, setPlaylist] = useState(false)
-
-    const handleClick = () => {
-        setPlaylist(true)
-    }
 
     return (
         <div>
             <Card className = {classes.card}>
-                <ButtonBase className = {classes.cardAction} onClick = {handleClick}>
+                <ButtonBase className = {classes.cardAction}>
                     <CardContent>
                         <Grid 
                             container
@@ -53,4 +47,4 @@ const Playlist = () => {
     )
 }
 
-export default Playlist
+export default PlaylistCard

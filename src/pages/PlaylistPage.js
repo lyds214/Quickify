@@ -1,5 +1,5 @@
 import React from 'react'
-import Playlist from '../components/Playlist'
+import PlaylistCard from '../components/PlaylistCard'
 
 import { Box, Card, CardContent, Grid, makeStyles, useState } from '@material-ui/core'
 
@@ -32,7 +32,7 @@ const PlaylistPage = () => {
                     >
                         <Grid item>
                             <CardContent>
-                                <Playlist/>
+                                <PlaylistCard/>
                             </CardContent>
                         </Grid>
                     </Grid>

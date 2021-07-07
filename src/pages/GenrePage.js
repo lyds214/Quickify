@@ -1,5 +1,5 @@
 import React from 'react'
-import Genre from '../components/Genre'
+import GenreCard from '../components/GenreCard'
 
 import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 
@@ -32,55 +32,9 @@ const GenrePage = () => {
                     >
                         <Grid item>
                             <CardContent>
-                                <Genre/>
+                                <GenreCard/>
                             </CardContent>
                         </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Genre/>
-                            </CardContent>
-                        </Grid>
-
                     </Grid>
                    
                 </Card>

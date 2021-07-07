@@ -1,5 +1,5 @@
 import React from 'react'
-import Artist from '../components/Artist'
+import ArtistAvatar from '../components/ArtistAvatar'
 
 import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
 
@@ -28,55 +28,9 @@ const ArtistPage = () => {
                     >
                         <Grid item>
                             <CardContent>
-                                <Artist/>
+                                <ArtistAvatar/>
                             </CardContent>
                         </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Artist/>
-                            </CardContent>
-                        </Grid>
-
                     </Grid>
                    
                 </Card>
