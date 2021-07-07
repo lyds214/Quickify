@@ -35,52 +35,6 @@ const PlaylistPage = () => {
                                 <Playlist/>
                             </CardContent>
                         </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-                        <Grid item>
-                            <CardContent>
-                                <Playlist/>
-                            </CardContent>
-                        </Grid>
-
                     </Grid>
                    
                 </Card>
