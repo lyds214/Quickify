@@ -2,6 +2,8 @@ import { React, useState } from 'react'
 import { Avatar, ButtonBase, Card,  CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
 import { green } from '@material-ui/core/colors'
 
+import PlaylistDisplay from '../components/PlaylistDisplay'
+
 const useStyles = makeStyles((theme) => ({
     card: {
         height: 250,
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 const PlaylistCard = () => {
     const classes = useStyles()
+    const [show, setShow] = useState(false)
 
     return (
         <div>
