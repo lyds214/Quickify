@@ -2,7 +2,6 @@ import { React, useState } from 'react'
 import { Avatar, ButtonBase, Card,  CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
 import { green } from '@material-ui/core/colors'
 
-import PlaylistDisplay from '../components/PlaylistDisplay'
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -21,14 +20,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const PlaylistCard = () => {
+const PlaylistCard = (props) => {
     const classes = useStyles()
-    const [show, setShow] = useState(false)
 
     return (
         <div>
             <Card className = {classes.card}>
-                <ButtonBase className = {classes.cardAction}>
+                <ButtonBase className = {classes.cardAction} onClick = {props.onClick}>
                     <CardContent>
                         <Grid 
                             container
@@ -37,7 +35,7 @@ const PlaylistCard = () => {
                             spacing = {2}
                         >
                             <Grid item>
-                                <Avatar variant = "rounded" className = {classes.rounded}></Avatar>
+                                <Avatar variant = "rounded" className = {classes.rounded}/>
                             </Grid>
                             <Grid item>
                                 <Typography>Playlist Name</Typography>
