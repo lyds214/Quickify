@@ -1,15 +1,15 @@
-import React from 'react'
-import { Avatar, Card, CardContent, IconButton, makeStyles, Typography } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Avatar, Button, Card, CardContent, Grid, IconButton, makeStyles, Typography } from '@material-ui/core'
 
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 const useStyles = makeStyles((theme) => ({
-    avatar: {
-        height: 130,
-        width: 130,
+    artistSpacing: {
+        paddingLeft: theme.spacing(2),
     },
-    content: {
-        flex: '1 0 auto',
+    avatar: {
+        height: 110,
+        width: 110,
     },
     controls: {
         display: 'flex',
@@ -17,42 +17,61 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: theme.spacing(6),
         paddingBottom: theme.spacing(3),
     },
-    details: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    playIcon: {
-        height: 38, 
-        width: 38,
-    },
     root: {
         display: 'flex',
         width: 280,
-        height: 130,
+        height: 110,
     },
+    
 }))
+
+// Play Button Icon
+const PlayButton = () => {
+    return (
+        <div>
+            <PlayArrowIcon/>
+        </div>
+    )
+}
 
 const SongCard = () => {
     const classes = useStyles()
+    const [isHovering, setIsHovering] = useState(false)
+
+    const handleMouseOver = () => {
+        setIsHovering(true)
+    }
+    const handleMouseOut = () => {
+        setIsHovering(false)
+    }
 
     return (
        <Card className = {classes.root}>
-           <Avatar variant = "square" className = {classes.avatar}/>
-           <div className = {classes.details}>
-               <CardContent className = {classes.content}>
-                   <Typography component = "h5" variant = "h6">
-                       Song Title
-                   </Typography>
-                   <Typography variant = "subtitle1" color = "textSecondary">
-                       Artist Name
-                   </Typography>
-               </CardContent>
-               <div className = {classes.controls}>
-                    <IconButton aria-label = "play/pause">
-                        <PlayArrowIcon className = {classes.icon}/>
-                    </IconButton>
-               </div>
-           </div>
+            <Avatar 
+                variant = "square" 
+                className = {classes.avatar} 
+                onMouseEnter = {handleMouseOver} 
+                onMouseLeave = {handleMouseOut}
+            /> {isHovering && <PlayButton/>}
+
+            <CardContent>
+                <Grid container
+                    direction = "row"
+                    justifyContent = "center"
+                    alignItems = "center"
+                    spacing = {1}
+                >
+                    <Grid item>
+                        <Typography className = {classes.artistSpacing} component = "h5" variant = "h6">
+                            Song Title
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Button className = {classes.artistSpacing} size = "small">Artist Name</Button>
+                    </Grid>
+                    
+                </Grid>
+            </CardContent>
        </Card>
     )
 }

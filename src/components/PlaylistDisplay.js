@@ -8,15 +8,21 @@ const useStyles = makeStyles((theme) => ({
         height: 100,
         width: 100,
     },
-    space : {
+    songSpace : {
         marginTop: theme.spacing(4),
     },
+    playlistNameSpace : {
+        marginLeft: theme.spacing(2),
+        marginTop: theme.spacing(2),
+        marginRight: theme.spacing(2),
+        marginBottom: theme.spacing(2),
+    }
 }))
 
 const PlaylistDisplay= () => {
     const classes = useStyles()
     return (
-        <div>
+        <div className = {classes.playlistNameSpace}>
             <Grid
                 container
                 direction = "row"
@@ -33,8 +39,8 @@ const PlaylistDisplay= () => {
                 </Grid>
 
             </Grid>
-            
-            <Card className = {classes.space}>
+        
+            <Card className = {classes.songSpace} style = {{backgroundColor: '#d9dadb'}} elevation = {0}>
                 <CardContent>
                     <Grid
                         container
@@ -46,11 +52,14 @@ const PlaylistDisplay= () => {
                         <Grid item>
                             <SongCard/>
                         </Grid>
+                        <Grid item>
+                            <SongCard/>
+                        </Grid>
                     </Grid>
                 </CardContent>
             </Card>
-            
         </div>
+       
     )
 }
 

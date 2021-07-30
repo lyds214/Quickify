@@ -1,6 +1,5 @@
 import { React, useState } from 'react'
 import { Avatar, ButtonBase, Card,  CardContent, Grid, makeStyles, Typography } from '@material-ui/core'
-import { green } from '@material-ui/core/colors'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,8 +12,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'initial',
     },
     rounded: {
-        color: '#fff',
-        backgroundColor: green[500],
         height: 180,
         width: 200,
     },
