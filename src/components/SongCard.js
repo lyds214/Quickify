@@ -29,20 +29,23 @@ const useStyles = makeStyles((theme) => ({
 const PlayButton = () => {
     return (
         <div>
-            <PlayArrowIcon/>
+            <IconButton>
+                <PlayArrowIcon fontSize = "medium"/>
+            </IconButton>
         </div>
     )
 }
 
 const SongCard = () => {
     const classes = useStyles()
-    const [isHovering, setIsHovering] = useState(false)
+    const [hovering, isHovering] = useState(false)
+    const [artist, setArtist] = useState(false)
 
     const handleMouseOver = () => {
-        setIsHovering(true)
+        isHovering(true)
     }
     const handleMouseOut = () => {
-        setIsHovering(false)
+        isHovering(false)
     }
 
     return (
@@ -52,7 +55,7 @@ const SongCard = () => {
                 className = {classes.avatar} 
                 onMouseEnter = {handleMouseOver} 
                 onMouseLeave = {handleMouseOut}
-            /> {isHovering && <PlayButton/>}
+            /> {hovering && <PlayButton/>}
 
             <CardContent>
                 <Grid container
@@ -67,7 +70,9 @@ const SongCard = () => {
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <Button className = {classes.artistSpacing} size = "small">Artist Name</Button>
+                        <Button className = {classes.artistSpacing} size = "small">
+                            Artist Name
+                        </Button>
                     </Grid>
                     
                 </Grid>
