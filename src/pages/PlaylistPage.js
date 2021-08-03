@@ -52,7 +52,7 @@ const PlaylistPage = () => {
                     >
                         <Grid item>
                             <CardContent>
-                                <PlaylistCard onClick = {() => setSelectedPlaylist(1)}/>
+                                <PlaylistCard onClick = {() => setSelectedPlaylist(true)}/>
                             </CardContent>
                         </Grid>
                     </Grid>

@@ -39,7 +39,6 @@ const PlayButton = () => {
 const SongCard = () => {
     const classes = useStyles()
     const [hovering, isHovering] = useState(false)
-    const [artist, setArtist] = useState(false)
 
     const handleMouseOver = () => {
         isHovering(true)
@@ -65,16 +64,22 @@ const SongCard = () => {
                     spacing = {1}
                 >
                     <Grid item>
-                        <Typography className = {classes.artistSpacing} component = "h5" variant = "h6">
+                        <Typography 
+                            className = {classes.artistSpacing} 
+                            component = "h5" 
+                            variant = "h6"
+                        >
                             Song Title
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <Button className = {classes.artistSpacing} size = "small">
+                        <Button
+                            size = "small"
+                            className = {classes.artistSpacing}
+                        >
                             Artist Name
                         </Button>
                     </Grid>
-                    
                 </Grid>
             </CardContent>
        </Card>

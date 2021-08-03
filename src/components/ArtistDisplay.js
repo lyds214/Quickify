@@ -1,9 +1,10 @@
 import React from 'react'
+import {Typography} from '@material-ui/core'
 
 const ArtistDisplay = () => {
     return (
         <div>
-            Artist Display
+            <Typography>Artist Display</Typography>
         </div>
     )
 }
