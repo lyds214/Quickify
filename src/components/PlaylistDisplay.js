@@ -62,7 +62,7 @@ const PlaylistDisplay= () => {
                     </Grid>
                 </CardContent>
             </Card>
-            <Card>
+            <Card className = {classes.songSpace} style = {{backgroundColor: '#d9dadb'}} elevation = {0}>
                 {artist ? <ArtistDisplay artist = {artist}/> : false}
             </Card>
         </div>
