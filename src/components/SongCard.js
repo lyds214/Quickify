@@ -36,7 +36,7 @@ const PlayButton = () => {
     )
 }
 
-const SongCard = () => {
+const SongCard = (props) => {
     const classes = useStyles()
     const [hovering, isHovering] = useState(false)
 
@@ -76,6 +76,7 @@ const SongCard = () => {
                         <Button
                             size = "small"
                             className = {classes.artistSpacing}
+                            onClick = {props.onClick}
                         >
                             Artist Name
                         </Button>

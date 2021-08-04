@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import PlaylistCard from '../components/PlaylistCard'
-import Artist from '../classes/Artist'
+//import Artist from '../classes/Artist'
 import PlaylistDisplay from '../components/PlaylistDisplay'
 
 import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
+import ArtistDisplay from '../components/ArtistDisplay'
 
 const useStyles = makeStyles((theme) => ({
     space: {
@@ -18,17 +19,13 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(5),
     }
 }))
-
-{/**To-dos:
- -Add padding at the top and bottom of the box
- */}
  
-
 const PlaylistPage = () => {
     const classes = useStyles()
-    const [selectedPlaylist, setSelectedPlaylist] = useState(null)
+    const [selectedPlaylist, setSelectedPlaylist] = useState(false)
+    const [artist, setArtist] = useState(false)
 
-    const playlist = {
+    {/*const playlist = {
         "BillieEillish": new Artist(
             "Billie Eillish",
             "Album Name",
@@ -39,7 +36,7 @@ const PlaylistPage = () => {
             "IDOL",
             "Love Yourself: Answer"
         )
-    }
+    }*/}
 
     return (
         <div className = {classes.space}>
@@ -57,7 +54,6 @@ const PlaylistPage = () => {
                         </Grid>
                     </Grid>
                 </Card>
-
                 <Card className = {classes.playlistSpace}>
                     {selectedPlaylist ? <PlaylistDisplay playlist = {selectedPlaylist}/> : null}
                 </Card>

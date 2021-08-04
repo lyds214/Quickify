@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Avatar, Card, CardContent, Grid, makeStyles, Typography} from '@material-ui/core'
 
 import SongCard from '../components/SongCard'
+import ArtistDisplay from '../components/ArtistDisplay'
 
 const useStyles = makeStyles((theme) => ({
     avatar: {
@@ -20,7 +21,10 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const PlaylistDisplay= () => {
+
     const classes = useStyles()
+    const [artist, setArtist] = useState(false)
+
     return (
         <div className = {classes.playlistNameSpace}>
             <Grid
@@ -50,13 +54,16 @@ const PlaylistDisplay= () => {
                         spacing = {3}
                     >
                         <Grid item>
-                            <SongCard/>
+                            <SongCard onClick = {() => setArtist(true)}/>
                         </Grid>
                         <Grid item>
                             <SongCard/>
                         </Grid>
                     </Grid>
                 </CardContent>
+            </Card>
+            <Card>
+                {artist ? <ArtistDisplay artist = {artist}/> : false}
             </Card>
         </div>
        
