@@ -28,22 +28,20 @@ const PlaylistCard = ({ onClick, artistName }) => {
   const classes = useStyles();
 
   return (
-    <div>
-      <Card className={classes.card}>
-        <ButtonBase className={classes.cardAction} onClick={onClick}>
-          <CardContent>
-            <Grid container justify="center" alignItems="center" spacing={2}>
-              <Grid item>
-                <Avatar variant="rounded" className={classes.rounded} />
-              </Grid>
-              <Grid item>
-                <Typography>{artistName}</Typography>
-              </Grid>
+    <Card className={classes.card}>
+      <ButtonBase className={classes.cardAction} onClick={onClick}>
+        <CardContent>
+          <Grid container justify="center" alignItems="center" spacing={2}>
+            <Grid item>
+              <Avatar variant="rounded" className={classes.rounded} />
             </Grid>
-          </CardContent>
-        </ButtonBase>
-      </Card>
-    </div>
+            <Grid item>
+              <Typography>{artistName}</Typography>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </ButtonBase>
+    </Card>
   );
 };
 
