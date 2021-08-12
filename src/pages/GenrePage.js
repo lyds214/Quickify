@@ -1,46 +1,43 @@
-import React from 'react'
-import GenreCard from '../components/GenreCard'
+import React from "react";
+import GenreCard from "../components/genre/GenreCard";
 
-import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
+import { Box, Card, CardContent, Grid, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-    space: {
-        marginTop: theme.spacing(5),
-        marginLeft: theme.spacing(16),
-    },
-    avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
-    }
-}))
+  space: {
+    marginTop: theme.spacing(5),
+    marginLeft: theme.spacing(16),
+  },
+  avatar: {
+    width: theme.spacing(15),
+    height: theme.spacing(15),
+  },
+}));
 
-{/**To-dos:
+{
+  /**To-dos:
  -Add padding at the top and bottom of the box
- */}
- 
-const GenrePage = () => {
-    const classes = useStyles()
-
-    return (
-        <div className = {classes.space}>
-            <Box width = "92%">
-                <Card>
-                    <Grid
-                        container 
-                        direction = "row"
-                        justify = "center"
-                    >
-                        <Grid item>
-                            <CardContent>
-                                <GenreCard/>
-                            </CardContent>
-                        </Grid>
-                    </Grid>
-                   
-                </Card>
-            </Box>
-        </div>
-    )
+ */
 }
 
-export default GenrePage
+const GenrePage = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.space}>
+      <Box width="92%">
+        <Card>
+          <Grid container direction="row" justify="center">
+            <Grid item>
+              <CardContent>
+                <GenreCard genre="Pop" />
+              </CardContent>
+            </Grid>
+          </Grid>
+        </Card>
+      </Box>
+    </div>
+  );
+};
+
+export default GenrePage;

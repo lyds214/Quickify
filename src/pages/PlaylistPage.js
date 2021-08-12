@@ -1,65 +1,53 @@
-import React, {useState} from 'react'
-import PlaylistCard from '../components/PlaylistCard'
-//import Artist from '../classes/Artist'
-import PlaylistDisplay from '../components/PlaylistDisplay'
+import React, { useState } from "react";
+import PlaylistCard from "../components/playlist/PlaylistCard";
+import PlaylistDisplay from "../components/playlist/PlaylistDisplay";
 
-import { Box, Card, CardContent, Grid, makeStyles } from '@material-ui/core'
-import ArtistDisplay from '../components/ArtistDisplay'
+import { Box, Card, CardContent, Grid, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-    space: {
-        marginTop: theme.spacing(5),
-        marginLeft: theme.spacing(16),
-    },
-    avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
-    },
-    playlistSpace: {
-        marginTop: theme.spacing(5),
-    }
-}))
- 
+  space: {
+    marginTop: theme.spacing(5),
+    marginLeft: theme.spacing(16),
+  },
+  avatar: {
+    width: theme.spacing(15),
+    height: theme.spacing(15),
+  },
+  playlistSpace: {
+    marginTop: theme.spacing(5),
+  },
+}));
+
 const PlaylistPage = () => {
-    const classes = useStyles()
-    const [selectedPlaylist, setSelectedPlaylist] = useState(false)
-    const [artist, setArtist] = useState(false)
+  const classes = useStyles();
+  const [selectedPlaylist, setSelectedPlaylist] = useState(false);
 
-    {/*const playlist = {
-        "BillieEillish": new Artist(
-            "Billie Eillish",
-            "Album Name",
-            "bad guy"
-        ),
-        "BTS": new Artist(
-            "BTS",
-            "IDOL",
-            "Love Yourself: Answer"
-        )
-    }*/}
+  return (
+    <div className={classes.space}>
+      <Box width="92%">
+        <Card>
+          <Grid container direction="row" justify="flex-start">
+            <Grid item>
+              <CardContent>
+                <PlaylistCard
+                  artistName="BTS"
+                  onClick={() => setSelectedPlaylist(true)}
+                />
+              </CardContent>
+            </Grid>
+          </Grid>
+        </Card>
+        <Card className={classes.playlistSpace}>
+          {selectedPlaylist ? (
+            <PlaylistDisplay
+              playlistName="BTS Songs"
+              playlist={selectedPlaylist}
+            />
+          ) : null}
+        </Card>
+      </Box>
+    </div>
+  );
+};
 
-    return (
-        <div className = {classes.space}>
-            <Box width = "92%">
-                <Card>
-                    <Grid
-                        container 
-                        direction = "row"
-                        justify = "flex-start"
-                    >
-                        <Grid item>
-                            <CardContent>
-                                <PlaylistCard onClick = {() => setSelectedPlaylist(true)}/>
-                            </CardContent>
-                        </Grid>
-                    </Grid>
-                </Card>
-                <Card className = {classes.playlistSpace}>
-                    {selectedPlaylist ? <PlaylistDisplay playlist = {selectedPlaylist}/> : null}
-                </Card>
-            </Box>
-        </div>
-    )
-}
-
-export default PlaylistPage
+export default PlaylistPage;
