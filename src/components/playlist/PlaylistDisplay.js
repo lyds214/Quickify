@@ -7,6 +7,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+
 import SongCard from "../SongCard";
 
 const useStyles = makeStyles((theme) => ({
