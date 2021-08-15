@@ -7,30 +7,71 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-<<<<<<< HEAD
 
 import SongCard from "../SongCard";
-=======
->>>>>>> parent of a049cbc (Starting to make SongCard)
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
     height: 100,
     width: 100,
   },
-  songSpace: {
-    marginTop: theme.spacing(4),
-  },
+
   playlistNameSpace: {
     marginLeft: theme.spacing(2),
     marginTop: theme.spacing(2),
     marginRight: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
+  songSpace: {
+    marginTop: theme.spacing(4),
+  },
+  row: {
+    padding: theme.spacing(1),
+  },
 }));
 
 const PlaylistDisplay = ({ playlistName }) => {
   const classes = useStyles();
+
+  function FormRow() {
+    return (
+      <React.Fragment>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+        <Grid item>
+          <SongCard className={classes.row} />
+        </Grid>
+      </React.Fragment>
+    );
+  }
 
   return (
     <div className={classes.playlistNameSpace}>
@@ -58,16 +99,20 @@ const PlaylistDisplay = ({ playlistName }) => {
           <Grid
             container
             direction="row"
-            justifyContent="flex-start"
+            justifyContent="center"
             alignItems="center"
             spacing={3}
-          ></Grid>
-<<<<<<< HEAD
-          <Grid item>
-            <SongCard songTitle="ON" artistName="BTS" />
+          >
+            <Grid container item>
+              <FormRow />
+            </Grid>
+            <Grid container item>
+              <FormRow />
+            </Grid>
+            <Grid container item>
+              <FormRow />
+            </Grid>
           </Grid>
-=======
->>>>>>> parent of a049cbc (Starting to make SongCard)
         </CardContent>
       </Card>
     </div>
