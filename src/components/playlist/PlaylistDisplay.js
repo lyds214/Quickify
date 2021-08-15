@@ -60,7 +60,7 @@ const PlaylistDisplay = ({ playlistName }) => {
             spacing={3}
           ></Grid>
           <Grid item>
-            <SongCard songTitle="ON" />
+            <SongCard songTitle="ON" artistName="BTS" />
           </Grid>
         </CardContent>
       </Card>
