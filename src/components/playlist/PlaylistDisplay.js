@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import SongCard from "../SongCard";
+import SongGrid from "../layout/SongGrid";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -25,53 +25,10 @@ const useStyles = makeStyles((theme) => ({
   songSpace: {
     marginTop: theme.spacing(4),
   },
-  row: {
-    padding: theme.spacing(1),
-  },
 }));
 
 const PlaylistDisplay = ({ playlistName }) => {
   const classes = useStyles();
-
-  function FormRow() {
-    return (
-      <React.Fragment>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-        <Grid item>
-          <SongCard className={classes.row} />
-        </Grid>
-      </React.Fragment>
-    );
-  }
 
   return (
     <div className={classes.playlistNameSpace}>
@@ -104,13 +61,13 @@ const PlaylistDisplay = ({ playlistName }) => {
             spacing={3}
           >
             <Grid container item>
-              <FormRow />
+              <SongGrid />
             </Grid>
             <Grid container item>
-              <FormRow />
+              <SongGrid />
             </Grid>
             <Grid container item>
-              <FormRow />
+              <SongGrid />
             </Grid>
           </Grid>
         </CardContent>
