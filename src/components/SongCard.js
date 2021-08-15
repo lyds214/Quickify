@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Avatar,
-  Card,
-  CardContent,
-  IconButton,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Avatar, Card, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -30,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SongCard = ({ onClick, songTitle, artistName }) => {
+const SongCard = ({ onClick }) => {
   const classes = useStyles();
 
   return (

@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   playlistNameSpace: {
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(4),
     marginTop: theme.spacing(2),
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(4),
     marginBottom: theme.spacing(2),
   },
   songSpace: {
