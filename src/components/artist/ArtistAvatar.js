@@ -18,22 +18,24 @@ const ArtistAvatar = ({ artistName }) => {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Grid
-        container
-        direction="column"
-        alignItems="center"
-        justify="center"
-        spacing={1}
-      >
-        <Grid item>
-          <Avatar className={classes.avatar} />
+    <div>
+      <Container>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justify="center"
+          spacing={1}
+        >
+          <Grid item>
+            <Avatar className={classes.avatar} />
+          </Grid>
+          <Grid item>
+            <Typography>{artistName}</Typography>
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography>{artistName}</Typography>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

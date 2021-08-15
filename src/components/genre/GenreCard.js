@@ -18,13 +18,15 @@ const GenreCard = ({ genre }) => {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography>{genre}</Typography>
-        </CardContent>
-      </Card>
-    </Container>
+    <div>
+      <Container>
+        <Card className={classes.card}>
+          <CardContent>
+            <Typography>{genre}</Typography>
+          </CardContent>
+        </Card>
+      </Container>
+    </div>
   );
 };
 

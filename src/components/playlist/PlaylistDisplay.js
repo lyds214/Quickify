@@ -7,8 +7,11 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+<<<<<<< HEAD
 
 import SongCard from "../SongCard";
+=======
+>>>>>>> parent of a049cbc (Starting to make SongCard)
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -59,9 +62,12 @@ const PlaylistDisplay = ({ playlistName }) => {
             alignItems="center"
             spacing={3}
           ></Grid>
+<<<<<<< HEAD
           <Grid item>
             <SongCard songTitle="ON" artistName="BTS" />
           </Grid>
+=======
+>>>>>>> parent of a049cbc (Starting to make SongCard)
         </CardContent>
       </Card>
     </div>
