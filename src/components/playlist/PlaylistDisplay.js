@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Avatar,
   Card,
@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import SongGrid from "../layout/SongGrid";
+import SongCard from "../SongCard";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
 }));
-
+const data = ["Billie Eillish", "BTS", "Ariana Grande"];
 const PlaylistDisplay = ({ playlistName }) => {
   const classes = useStyles();
 
@@ -60,14 +60,13 @@ const PlaylistDisplay = ({ playlistName }) => {
             alignItems="center"
             spacing={3}
           >
-            <Grid container item>
-              <SongGrid />
-            </Grid>
-            <Grid container item>
-              <SongGrid />
-            </Grid>
-            <Grid container item>
-              <SongGrid />
+            <Grid container>
+              <Grid item>
+                <SongCard songAndArtist={data} />
+              </Grid>
+              <Grid item>
+                <SongCard />
+              </Grid>
             </Grid>
           </Grid>
         </CardContent>

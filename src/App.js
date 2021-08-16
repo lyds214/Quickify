@@ -5,42 +5,47 @@ import Top50Page from "./pages/Top50Page";
 import ArtistPage from "./pages/ArtistPage";
 import GenrePage from "./pages/GenrePage";
 
-import { MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  CssBaseline,
+} from "@material-ui/core";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+const data = {
+  "Billie Eillish": "bad guy",
+  BTS: "The Truth Untold",
+  "Ariana Grande": "7 rings",
+};
 
 const theme = createMuiTheme({
   palette: {
     secondary: {
-      main: '#fff'
+      main: "#fff",
     },
     background: {
-      default: '#3f51b5'
-    }
-  }
-})
+      default: "#3f51b5",
+    },
+  },
+});
 
 function App() {
   return (
-    <MuiThemeProvider theme = {theme}>
+    <MuiThemeProvider theme={theme}>
       <CssBaseline>
         <Router>
-          <Header/>
-          <GroupButton/>
+          <Header />
+          <GroupButton />
 
           <Switch>
-            <Route exact path = "/" component = {PlaylistPage}/>
-            <Route path = "/artist" component = {ArtistPage}/>
-            <Route path = "/genre" component = {GenrePage}/>
-            <Route path = "/top50" component = {Top50Page}/>
+            <Route exact path="/" component={PlaylistPage} />
+            <Route path="/artist" component={ArtistPage} />
+            <Route path="/genre" component={GenrePage} />
+            <Route path="/top50" component={Top50Page} />
           </Switch>
-          
         </Router>
       </CssBaseline>
     </MuiThemeProvider>
-
-
-
 
     // <MuiThemeProvider theme = {theme}>
     //   <CssBaseline/>

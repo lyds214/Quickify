@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Avatar, Card, makeStyles } from "@material-ui/core";
+import { Avatar, Card, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -18,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
     height: 130,
   },
   space: {
-    paddingTop: theme.spacing(1),
-    paddingLeft: theme.spacing(1),
+    paddingTop: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
 }));
 
-const SongCard = ({ onClick }) => {
+const SongCard = ({ onClick, songAndArtist }) => {
   const classes = useStyles();
 
   return (
